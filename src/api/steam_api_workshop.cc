@@ -426,8 +426,7 @@ void RegisterAPIs(v8::Handle<v8::Object> exports) {
            Nan::New<v8::FunctionTemplate>(UGCShowOverlay)->GetFunction());
   Nan::Set(exports,
            Nan::New("ugcUnsubscribe").ToLocalChecked(),
-           Nan::New<v8::FunctionTemplate>(UGCUnsubscribe)->GetFunction());
-           Nan::New<v8::FunctionTemplate>(UGCShowOverlay)->GetFunction());
+Nan::New<v8::FunctionTemplate>(UGCUnsubscribe)->GetFunction());
   Nan::Set(exports,
            Nan::New("ugcSubscribe").ToLocalChecked(),
            Nan::New<v8::FunctionTemplate>(UGCSubscribe)->GetFunction());
