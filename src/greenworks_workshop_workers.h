@@ -197,7 +197,6 @@ class UnsubscribePublishedFileWorker : public SteamCallbackAsyncWorker {
   CCallResult<UnsubscribePublishedFileWorker,
       RemoteStoragePublishedFileUnsubscribed_t> unsubscribe_call_result_;
 };
-};
 
 class SubscribePublishedFileWorker : public SteamCallbackAsyncWorker {
  public:

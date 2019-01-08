@@ -518,7 +518,6 @@ void UnsubscribePublishedFileWorker::OnUnsubscribeCompleted(
     RemoteStoragePublishedFileUnsubscribed_t* result, bool io_failure) {
   is_completed_ = true;
 }
-}
 
 SubscribePublishedFileWorker::SubscribePublishedFileWorker(
     Nan::Callback* success_callback, Nan::Callback* error_callback,

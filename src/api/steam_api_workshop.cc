@@ -373,7 +373,6 @@ NAN_METHOD(UGCUnsubscribe) {
       success_callback, error_callback, unsubscribed_file_id));
   info.GetReturnValue().Set(Nan::Undefined());
 }
-}
 
 NAN_METHOD(UGCSubscribe) {
   Nan::HandleScope scope;
