@@ -197,6 +197,25 @@ class UnsubscribePublishedFileWorker : public SteamCallbackAsyncWorker {
   CCallResult<UnsubscribePublishedFileWorker,
       RemoteStoragePublishedFileUnsubscribed_t> unsubscribe_call_result_;
 };
+};
+
+class SubscribePublishedFileWorker : public SteamCallbackAsyncWorker {
+ public:
+  SubscribePublishedFileWorker(Nan::Callback* success_callback,
+                                 Nan::Callback* error_callback,
+                                 PublishedFileId_t subscribe_file_id);
+
+  void OnSubscribeCompleted(RemoteStoragePublishedFileSubscribed_t* result,
+      bool io_failure);
+
+  void Execute() override;
+
+ private:
+  PublishedFileId_t subscribe_file_id_;
+
+  CCallResult<SubscribePublishedFileWorker,
+      RemoteStoragePublishedFileSubscribed_t> subscribe_call_result_;
+};
 
 }  // namespace greenworks
 
